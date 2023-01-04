@@ -55,18 +55,18 @@ const Gigs = () => {
                 <TextFormatted
                   style={{
                     backgroundColor: theme.colors.maincolor,
-                    fontSize: 14,
+                    fontSize: 10,
                     fontWeight: '600',
                     color: theme.colors.primary,
                     paddingHorizontal: 20,
                     paddingVertical: 5,
                     borderRadius: 5,
                   }}>
-                  Apply
+                  Apply as Vandor
                 </TextFormatted>
                 <TextFormatted
                   style={{
-                    marginLeft: 25,
+                    marginLeft: 10,
                     fontSize: 14,
                     fontWeight: '600',
                     color: theme.colors.maincolor,

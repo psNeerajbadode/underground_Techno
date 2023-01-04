@@ -1,4 +1,11 @@
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import Statusbar from '../../component/Statusbar';
 import {theme} from '../../utils/Constants';
@@ -7,6 +14,8 @@ import TextFormatted from '../../component/TextFormatted';
 import {useState} from 'react';
 import moment from 'moment';
 import {useNavigation} from '@react-navigation/native';
+import Header2 from '../../component/Header2';
+import CustomeInput from '../../component/CustomeInput';
 const Calendarscreen = () => {
   const navigation = useNavigation();
   const [selectedDate, setSelectedDate] = useState();
@@ -25,17 +34,34 @@ const Calendarscreen = () => {
         translucent={false}
       />
 
-      <TextFormatted
+      {/* <Header2
+        onPress={() => navigation.goBack()}
+        Tcolor={theme.colors.maincolor}
+        TfontSize={16}
+        title={' Select Date'}
+      /> */}
+
+      <View
         style={{
-          fontSize: 16,
-          fontWeight: '500',
-          textAlign: 'center',
-          marginTop: 50,
-          color: theme.colors.maincolor,
-          marginBottom: 10,
+          ...styles.FlexStyle,
+          marginTop: 40,
+          marginBottom: 20,
         }}>
-        Select Date
-      </TextFormatted>
+        <TouchableOpacity
+          style={{alignSelf: 'center'}}
+          onPress={() => navigation.goBack()}>
+          <Image
+            resizeMode="contain"
+            style={{width: 48, height: 48, marginRight: -8}}
+            source={require('../../assets/Icon/Backarrow.png')}
+          />
+        </TouchableOpacity>
+        <CustomeInput
+          vmarginHorizontal={0}
+          flex={1}
+          placeholder={'Type a destination'}
+        />
+      </View>
 
       <Calendar
         // onDayPress={day => setSelectedDate(day)}
@@ -137,4 +163,11 @@ const PartyComponent = ({setPartyselect, title, data, selected, Onpress2}) => (
 );
 export default Calendarscreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  FlexStyle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    marginLeft: 20,
+  },
+});

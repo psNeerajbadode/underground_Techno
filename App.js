@@ -11,7 +11,6 @@ import Authnavi from './src/screen/navigationscreen/Authnavigation/Authnavi';
 const Stack = createNativeStackNavigator();
 const App = () => {
   return (
- 
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <NavigationContainer>

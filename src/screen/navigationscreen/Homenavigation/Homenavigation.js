@@ -109,32 +109,7 @@ const Homenavigation = () => {
               ),
             }}
           />
-          <Tab.Screen
-            name="Setting"
-            component={Setting}
-            options={{
-              tabBarIcon: ({color, size, focused}) => (
-                <View style={{alignItems: 'center'}}>
-                  <Image
-                    resizeMode="contain"
-                    source={require('../../../assets/Icon/seeting.png')}
-                    style={{
-                      width: 24,
-                      height: 24,
-                      tintColor: focused ? theme.colors.maincolor : '#b3b3b3',
-                    }}
-                  />
-                  <TextFormatted
-                    style={{
-                      ...styles.title,
-                      color: focused ? theme.colors.maincolor : '#b3b3b3',
-                    }}>
-                    Setting
-                  </TextFormatted>
-                </View>
-              ),
-            }}
-          />
+
           <Tab.Screen
             name="Profile"
             component={Profile}
@@ -156,6 +131,32 @@ const Homenavigation = () => {
                       color: focused ? theme.colors.maincolor : '#b3b3b3',
                     }}>
                     Profile
+                  </TextFormatted>
+                </View>
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Setting"
+            component={Setting}
+            options={{
+              tabBarIcon: ({color, size, focused}) => (
+                <View style={{alignItems: 'center'}}>
+                  <Image
+                    resizeMode="contain"
+                    source={require('../../../assets/Icon/seeting.png')}
+                    style={{
+                      width: 24,
+                      height: 24,
+                      tintColor: focused ? theme.colors.maincolor : '#b3b3b3',
+                    }}
+                  />
+                  <TextFormatted
+                    style={{
+                      ...styles.title,
+                      color: focused ? theme.colors.maincolor : '#b3b3b3',
+                    }}>
+                    Setting
                   </TextFormatted>
                 </View>
               ),

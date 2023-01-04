@@ -83,7 +83,7 @@ const Homescreen = () => {
       <Button
         buttonName={'search'}
         marginVertical={25}
-        onPress={() => navigation.navigate('Calendarscreen')}
+        onPress={() => navigation.navigate('Past', {title: 'Party'})}
       />
       <Modal isVisible={popup}>
         <View

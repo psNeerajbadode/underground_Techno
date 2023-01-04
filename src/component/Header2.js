@@ -14,6 +14,8 @@ const Header2 = ({
   onPressR,
   sizeR,
   RightT,
+  TfontSize,
+  Tcolor,
 }) => {
   const navigation = useNavigation();
   return (
@@ -39,9 +41,9 @@ const Header2 = ({
         </TouchableOpacity>
         <TextFormatted
           style={{
-            fontSize: 14,
+            fontSize: TfontSize || 14,
             fontWeight: '600',
-            color: theme.colors.primaryBlack,
+            color: Tcolor || theme.colors.primaryBlack,
             textTransform: 'capitalize',
           }}>
           {title}
