@@ -75,6 +75,7 @@ const Partyv = () => {
               overflow: 'hidden',
             }}>
             <TouchableOpacity
+              onPress={() => navigation.navigate('DMscreen')}
               style={{
                 flex: 1,
                 alignSelf: 'flex-end',
